@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="8" height="65" tilewidth="64" tileheight="64" backgroundcolor="#086172">
+ <tileset firstgid="1" name="tiles" tilewidth="64" tileheight="64">
+  <image source="textures/tiles.png" width="128" height="448"/>
+ </tileset>
+ <layer name="ground" width="8" height="65">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMglEwCkbBSANcBDAAiLou6CAIAAA=
+  </data>
+ </layer>
+ <layer name="platforms" width="8" height="65">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAXDCXAPsDwfAfmhCoZ6uA20/aOAdoAbCWMDfEh4FAwtQGq5go3Pg0WeB00cFwAA0nUHMiAIAAA=
+  </data>
+ </layer>
+ <layer name="sky" width="8" height="65">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NlYGBgpQCPglEwCkbBKBgFo2D4AQDWU6ALIAgAAA==
+  </data>
+ </layer>
+ <layer name="visual" width="8" height="65">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMglEwCkbBcAOcBDAXAQwARJGqFCAIAAA=
+  </data>
+ </layer>
+ <objectgroup name="hazard" width="8" height="65">
+  <object gid="7" x="64" y="3776"/>
+  <object gid="7" x="128" y="704"/>
+  <object gid="7" x="320" y="1664"/>
+  <object gid="6" x="0" y="1920"/>
+  <object gid="6" x="0" y="640"/>
+  <object gid="6" x="448" y="3072"/>
+  <object gid="6" x="448" y="3904"/>
+  <object gid="6" x="448" y="3392"/>
+  <object gid="6" x="0" y="3136"/>
+  <object gid="6" x="192" y="2688"/>
+  <object gid="6" x="256" y="2176"/>
+  <object gid="6" x="192" y="1216"/>
+  <object gid="6" x="384" y="896"/>
+  <object gid="7" x="256" y="960"/>
+  <object gid="7" x="64" y="1088"/>
+  <object gid="7" x="64" y="2176"/>
+  <object gid="7" x="320" y="2560"/>
+  <object gid="7" x="256" y="3136"/>
+  <object gid="7" x="0" y="3328"/>
+ </objectgroup>
+ <objectgroup name="collectable" width="8" height="65">
+  <object gid="8" x="128" y="4096"/>
+  <object gid="8" x="320" y="4096"/>
+  <object gid="13" x="384" y="704"/>
+  <object gid="13" x="64" y="576"/>
+  <object gid="13" x="384" y="1024"/>
+  <object gid="13" x="128" y="1344"/>
+  <object gid="13" x="64" y="1728"/>
+  <object gid="13" x="320" y="1984"/>
+  <object gid="13" x="192" y="2304"/>
+  <object gid="13" x="64" y="2560"/>
+  <object gid="13" x="320" y="2880"/>
+  <object gid="13" x="128" y="3136"/>
+  <object gid="13" x="256" y="3392"/>
+  <object gid="13" x="384" y="3712"/>
+  <object gid="8" x="192" y="4096"/>
+  <object gid="8" x="0" y="3904"/>
+  <object gid="8" x="448" y="4032"/>
+ </objectgroup>
+ <objectgroup name="trigger" width="8" height="65"/>
+</map>

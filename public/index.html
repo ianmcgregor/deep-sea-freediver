@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="robots" content="index,nofollow" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui" />
+
+    <title></title>
+
+    <link href="css/game.css" rel="stylesheet" />
+    <script src="js/lib/modernizr/modernizr.custom.js" ></script>
+</head>
+<body>
+
+    <div class="outdated">
+        <!--<img src="img/outdated.png" />-->
+    </div>
+
+    <div class="rotate">
+        <!--<img src="img/rotate.png" />-->
+    </div>
+
+    <div id="game-wrapper" class="wrapper"></div>
+
+    <script>
+        (function() {
+            if(Modernizr.modern){
+                var s = document.createElement('script');
+                //var unmin = window.location.hostname === 'localhost' || window.location.search.indexOf('unmin') !== -1;
+                var unmin = true;
+                if (unmin) {
+                    var require = {'urlArgs': 'bust='+new Date().getTime()};
+                    s.src = 'js/vendor/requirejs/require.js';
+                    s.setAttribute('data-main', 'js/main');
+                } else {
+                    s.src = 'js/main.min.js';
+                }
+                document.body.appendChild(s);
+            }
+        })();
+    </script>
+</body>
+</html>

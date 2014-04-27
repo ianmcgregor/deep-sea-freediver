@@ -1,0 +1,132 @@
+{"frames": [
+
+{
+	"filename": "boat_b",
+	"frame": {"x":260,"y":132,"w":128,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":84},
+	"sourceSize": {"w":128,"h":84}
+},
+{
+	"filename": "boulder",
+	"frame": {"x":260,"y":218,"w":64,"h":56},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":4,"w":64,"h":56},
+	"sourceSize": {"w":64,"h":64}
+},
+{
+	"filename": "button_down",
+	"frame": {"x":2,"y":198,"w":256,"h":48},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":16,"w":256,"h":48},
+	"sourceSize": {"w":256,"h":64}
+},
+{
+	"filename": "button_up",
+	"frame": {"x":2,"y":132,"w":256,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":64},
+	"sourceSize": {"w":256,"h":64}
+},
+{
+	"filename": "clam",
+	"frame": {"x":390,"y":200,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+},
+{
+	"filename": "clouds",
+	"frame": {"x":2,"y":2,"w":256,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":128},
+	"sourceSize": {"w":256,"h":128}
+},
+{
+	"filename": "fish",
+	"frame": {"x":456,"y":2,"w":48,"h":36},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":16,"w":48,"h":36},
+	"sourceSize": {"w":64,"h":64}
+},
+{
+	"filename": "heart",
+	"frame": {"x":456,"y":210,"w":28,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":24},
+	"sourceSize": {"w":28,"h":24}
+},
+{
+	"filename": "heart_empty",
+	"frame": {"x":456,"y":184,"w":28,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":24},
+	"sourceSize": {"w":28,"h":24}
+},
+{
+	"filename": "hero_stand_b",
+	"frame": {"x":456,"y":114,"w":32,"h":68},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":4,"w":32,"h":68},
+	"sourceSize": {"w":40,"h":72}
+},
+{
+	"filename": "hero_swim_b",
+	"frame": {"x":456,"y":40,"w":40,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":72},
+	"sourceSize": {"w":40,"h":72}
+},
+{
+	"filename": "plants",
+	"frame": {"x":390,"y":134,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+},
+{
+	"filename": "spiky",
+	"frame": {"x":390,"y":68,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+},
+{
+	"filename": "star",
+	"frame": {"x":390,"y":2,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+},
+{
+	"filename": "waves_back",
+	"frame": {"x":260,"y":2,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "textures.png",
+	"format": "RGBA8888",
+	"size": {"w":512,"h":512},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:0108ea978c669eae2371d47e6bd345a8:454bd1984b7f88a07eb51ffddfaf2189:1f26665958081287647f51313faf3d45$"
+}
+}

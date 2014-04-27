@@ -1,0 +1,10 @@
+{
+    "name": "rayban-neverhide-game",
+    "version": "0.0.1",
+    "dependencies": {
+        "phaser-official": "latest",
+        "requirejs": "latest",
+        "requirejs-domready": "latest",
+        "almond": "latest"
+    }
+}

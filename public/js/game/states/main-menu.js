@@ -34,7 +34,7 @@ define(
             this.title.align = 'center';
             this.title.x = (this.game.width - this.title.textWidth) * 0.5;
             
-            this.instructions = this.game.add.bitmapText(0, 270, Settings.game.font, 'USE THE ARROW KEYS TO DIVE,\nDISCOVER HIDDEN TREASURES\nAND AVOID HAZARDS!', 24);
+            this.instructions = this.game.add.bitmapText(0, 250, Settings.game.font, 'USE THE ARROW KEYS\nOR WASD TO DIVE,\nCOLLECT TREASURE\nAND AVOID HAZARDS!', 24);
             this.instructions.align = 'center';
             this.instructions.x = (this.game.width - this.instructions.textWidth) * 0.5;
 

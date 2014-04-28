@@ -53,7 +53,7 @@ define(
                 maxDeltaTime: 0.1
             },
             hero: {
-                lives: 5,
+                lives: 6,
                 initialPosition: { x: 124, y: 128*scale },
                 mass: 1,
                 velocity: { x: 200*scale, y: 0 },

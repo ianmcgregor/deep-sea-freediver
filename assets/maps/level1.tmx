@@ -30,7 +30,7 @@
   <object gid="6" x="0" y="1920"/>
   <object gid="6" x="0" y="640"/>
   <object gid="6" x="448" y="3072"/>
-  <object gid="6" x="448" y="3904"/>
+  <object gid="6" x="192" y="3968"/>
   <object gid="6" x="448" y="3392"/>
   <object gid="6" x="0" y="3136"/>
   <object gid="6" x="192" y="2688"/>
@@ -43,6 +43,9 @@
   <object gid="7" x="320" y="2560"/>
   <object gid="7" x="256" y="3136"/>
   <object gid="7" x="0" y="3328"/>
+  <object gid="6" x="0" y="3584"/>
+  <object gid="6" x="448" y="1536"/>
+  <object gid="6" x="448" y="384"/>
  </objectgroup>
  <objectgroup name="collectable" width="8" height="65">
   <object gid="8" x="128" y="4096"/>
@@ -62,6 +65,9 @@
   <object gid="8" x="192" y="4096"/>
   <object gid="8" x="0" y="3904"/>
   <object gid="8" x="448" y="4032"/>
+  <object gid="8" x="128" y="2944"/>
+  <object gid="13" x="128" y="3840"/>
+  <object gid="13" x="448" y="1472"/>
  </objectgroup>
  <objectgroup name="trigger" width="8" height="65"/>
 </map>

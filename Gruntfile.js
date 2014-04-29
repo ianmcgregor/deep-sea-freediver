@@ -89,10 +89,7 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
-    grunt.loadNpmTasks('grunt-bump');
-    grunt.loadNpmTasks('grunt-complexity');
     grunt.loadNpmTasks('grunt-strip');
 
     grunt.registerTask('build', ['requirejs:js', 'strip']);

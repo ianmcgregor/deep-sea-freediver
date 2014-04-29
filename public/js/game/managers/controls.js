@@ -28,17 +28,14 @@ define(
                 Phaser.Keyboard.A,
                 Phaser.Keyboard.D
             ]);
+
+            this.swipedUp = false;
+            this.swipedDown = false;
         };
 
         Controls.prototype.update = function() {
             if(this.userControlRemoved) { return; }
 
-            if(this.upIsPressed() || this.isSwipedUp()) {
-                this.hero.up();
-            }
-            else if(this.downIsPressed() || this.isSwipedDown()) {
-                this.hero.down();
-            }
             if(this.leftIsPressed() || this.isSwipedLeft()) {
                 this.hero.left();
             }
@@ -68,17 +65,39 @@ define(
         };
 
         Controls.prototype.isSwipedDown = function() {
-            return (
-                this.game.input.activePointer.isDown &&
-                this.game.input.activePointer.duration > this.game.input.tapRate &&
-                this.game.input.speed.y > Settings.controls.swipeThreshold );
+            if(!this.game.input.activePointer.isDown) {
+                this.swipedDown = false;
+            }
+            else if(!this.swipedDown) {
+                this.swipedDown = (
+                    this.game.input.activePointer.isDown &&
+                    this.game.input.activePointer.duration > this.game.input.tapRate &&
+                    this.game.input.speed.y > 10 );    
+            }
+
+            if(this.swipedDown) {
+                this.swipedUp = false;
+            }
+
+            return this.swipedDown;
         };
 
         Controls.prototype.isSwipedUp = function() {
-            return (
-                this.game.input.activePointer.isDown &&
-                this.game.input.activePointer.duration > this.game.input.tapRate &&
-                this.game.input.speed.y < -Settings.controls.swipeThreshold );
+            if(!this.game.input.activePointer.isDown) {
+                this.swipedUp = false;
+            }
+            else if(!this.swipedUp) {
+                this.swipedUp = (
+                    this.game.input.activePointer.isDown &&
+                    this.game.input.activePointer.duration > this.game.input.tapRate &&
+                    this.game.input.speed.y < -10 );
+            }
+
+            if(this.swipedUp) {
+                this.swipedDown = false;
+            }
+
+            return this.swipedUp;
         };
 
         Controls.prototype.isSwipedLeft = function() {

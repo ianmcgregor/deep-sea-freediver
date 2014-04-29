@@ -109,7 +109,7 @@ define(
             },
             controls: {
                 tapRate: 50,
-                swipeThreshold: 0.15
+                swipeThreshold: 10
             },
             assets: {
                boot: {

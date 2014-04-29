@@ -54,19 +54,20 @@ define(
             if(Settings.game.device.desktop) {
                 return;
             }
-            this.game.scale.enterIncorrectOrientation.add(this.changeOrientation, this);
-            this.game.scale.leaveIncorrectOrientation.add(this.changeOrientation, this);
-            this.game.scale.forceOrientation(true, false);
-            this.game.scale.checkOrientationState();
+            //this.game.scale.enterIncorrectOrientation.add(this.changeOrientation, this);
+            //this.game.scale.leaveIncorrectOrientation.add(this.changeOrientation, this);
+            this.game.scale.forceOrientation(false, false);
+            //this.game.scale.checkOrientationState();
         };
 
         Boot.prototype.changeOrientation = function() {
-            if(this.game.scale.incorrectOrientation){
+        /*    if(this.game.scale.incorrectOrientation){
                 document.documentElement.classList.add('rotation');
             }
             else {
                 document.documentElement.classList.remove('rotation');
             }
+            */
         };
 
         Boot.prototype.resize = function(width, height) {

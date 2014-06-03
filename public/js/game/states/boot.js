@@ -28,8 +28,6 @@ define(
             this.game.scale.maxWidth = Settings.game.width*2;
             this.game.scale.maxHeight = Settings.game.height*2;
             this.game.scale.refresh();
-            //this.game.scale.hasResized.add(this.resize, this);
-            this.resize(this.game.scale.width, this.game.scale.height);
 
             var screenShake = this.game.plugins.add(ScreenShake);
             this.game.plugins.screenShake = screenShake;
@@ -45,52 +43,8 @@ define(
         };
 
         Boot.prototype.create = function() {
-            this.initOrientation();
             this.game.stage.backgroundColor = Settings.game.backgroundColor;
             this.game.state.start('Preloader');
-        };
-
-        Boot.prototype.initOrientation = function() {
-            if(Settings.game.device.desktop) {
-                return;
-            }
-            //this.game.scale.enterIncorrectOrientation.add(this.changeOrientation, this);
-            //this.game.scale.leaveIncorrectOrientation.add(this.changeOrientation, this);
-            this.game.scale.forceOrientation(false, false);
-            //this.game.scale.checkOrientationState();
-        };
-
-        Boot.prototype.changeOrientation = function() {
-        /*    if(this.game.scale.incorrectOrientation){
-                document.documentElement.classList.add('rotation');
-            }
-            else {
-                document.documentElement.classList.remove('rotation');
-            }
-            */
-        };
-
-        Boot.prototype.resize = function(width, height) {
-            /*function marginToNumber(margin){
-                return Number(margin.replace('px',''));
-            }
-            var scale = Math.min(width/1280, height/610);
-
-            var xOffset = marginToNumber(this.game.canvas.style.marginLeft);
-            var yOffset = marginToNumber(this.game.canvas.style.marginTop);
-
-            var el;
-            for(var id in this.dynamicDivs){
-                el = document.getElementById(id);
-                if(el === undefined){
-                    console.log('Cant find div with id:'+id);
-                }else{
-                    el.style.webkitTransform = 'scale('+scale+','+scale+')';
-                    el.style.left = ((xOffset + this.dynamicDivs[id].x*scale))+'px';
-                    el.style.top = ((yOffset + this.dynamicDivs[id].y*scale))+'px';
-                    el.style.webkitTransformOrigin = '0 0';
-                }
-            }*/
         };
 
         return Boot;

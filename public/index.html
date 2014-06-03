@@ -37,8 +37,8 @@
         (function() {
             if(Modernizr.modern){
                 var s = document.createElement('script');
-                //var unmin = window.location.hostname === 'localhost' || window.location.search.indexOf('unmin') !== -1;
-                var unmin = true;
+                var unmin = window.location.hostname === 'localhost' || window.location.search.indexOf('unmin') !== -1;
+                //var unmin = true;
                 if (unmin) {
                     var require = {'urlArgs': 'bust='+new Date().getTime()};
                     s.src = 'js/vendor/requirejs/require.js';

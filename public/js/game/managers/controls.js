@@ -72,7 +72,7 @@ define(
                 this.swipedDown = (
                     this.game.input.activePointer.isDown &&
                     this.game.input.activePointer.duration > this.game.input.tapRate &&
-                    this.game.input.speed.y > 10 );    
+                    this.game.input.speed.y > 10 );
             }
 
             if(this.swipedDown) {

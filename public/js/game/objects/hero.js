@@ -73,7 +73,7 @@ define(
 
             if(!this.swimming && !this.onBoat && this.y > 128) {
                 this.swimming = true;
-                this.frameName = 'hero_swim_b';   
+                this.frameName = 'hero_swim_b';
             }
             if(this.swimming && this.treadingWater) {
                 this.body.velocity.y = 50 * this.direction;

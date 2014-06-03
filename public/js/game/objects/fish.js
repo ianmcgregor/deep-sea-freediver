@@ -16,7 +16,7 @@ define(
             this.vel = 300 * Settings.game.scale;
             this.direction = 1;
             this.body.velocity.x = this.vel * this.direction;
-        	this.anchor.x = 0.5;
+            this.anchor.x = 0.5;
             this.anchor.y = 0.5;
         }
 
@@ -24,16 +24,16 @@ define(
         Fish.prototype.constructor = Fish;
 
         Fish.prototype.update = function() {
-        	if(this.direction === 1 && this.body.x > this.game.width + this.width) {
-        		this.direction = -1;
-        		this.body.velocity.x = this.vel * this.direction;
-        		this.scale.x = this.direction;
-        	}
-        	else if(this.direction === -1 && this.body.x < -100) {
-        		this.direction = 1;
-        		this.body.velocity.x = this.vel * this.direction;
-        		this.scale.x = this.direction;
-        	}
+            if(this.direction === 1 && this.body.x > this.game.width + this.width) {
+                this.direction = -1;
+                this.body.velocity.x = this.vel * this.direction;
+                this.scale.x = this.direction;
+            }
+            else if(this.direction === -1 && this.body.x < -100) {
+                this.direction = 1;
+                this.body.velocity.x = this.vel * this.direction;
+                this.scale.x = this.direction;
+            }
         };
 
         return Fish;

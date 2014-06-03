@@ -1,9 +1,8 @@
 define(
     [
-        'Phaser',
-        'game/settings/settings'
+        'Phaser'
     ],
-    function(Phaser, Settings) {
+    function(Phaser) {
         'use strict';
 
         function Oyster(game, x, y, key, frame) {
@@ -17,9 +16,6 @@ define(
 
         Oyster.prototype = Object.create(Phaser.Sprite.prototype);
         Oyster.prototype.constructor = Oyster;
-
-        Oyster.prototype.update = function() {
-        };
 
         return Oyster;
     }

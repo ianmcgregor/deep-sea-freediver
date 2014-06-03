@@ -1,10 +1,9 @@
 /* spinner.js */
 define(
     [
-        'Phaser',
-        'game/settings/settings'
+        'Phaser'
     ],
-    function(Phaser, Settings) {
+    function(Phaser) {
         'use strict';
 
         function Spinner(game) {
@@ -19,8 +18,7 @@ define(
         Spinner.prototype = Object.create(Phaser.Sprite.prototype);
         Spinner.prototype.constructor = Spinner;
 
-        Spinner.prototype.setProgress = function(progress) {
-            //progress = ((progress<0) ? 0 : progress)*0.01;
+        Spinner.prototype.setProgress = function() {
         };
 
         return Spinner;

@@ -1,9 +1,8 @@
 define(
     [
-        'Phaser',
-        'game/settings/settings'
+        'Phaser'
     ],
-    function(Phaser, Settings) {
+    function(Phaser) {
         'use strict';
 
         function Boat(game, x, y, key, frame) {
@@ -17,10 +16,6 @@ define(
 
         Boat.prototype = Object.create(Phaser.Sprite.prototype);
         Boat.prototype.constructor = Boat;
-
-        Boat.prototype.update = function() {
-        	
-        };
 
         return Boat;
     }

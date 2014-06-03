@@ -2,10 +2,9 @@
 define(
     [
         'Phaser',
-        'game/utils/url-params',
-        'game/utils/phaser-utils'
+        'game/utils/url-params'
     ],
-    function(Phaser, UrlParams, PhaserUtils) {
+    function(Phaser, UrlParams) {
         'use strict';
 
         var device = new Phaser.Device();

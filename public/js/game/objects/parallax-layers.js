@@ -21,13 +21,10 @@ define(
 
         ParallaxLayers.prototype.updateScrolling = function(baseScrollingSpeedX, baseScrollingSpeedY) {
             var l = this.layers.length,
-                view = this.game.camera.view,
                 layer;
 
             for(var i = 0; i < l; i++) {
                 layer = this.layers[i];
-                //layer.x = view.x; //~~this.game.camera.view.x;
-               // layer.y = view.y;
                 layer.tilePosition.x -= baseScrollingSpeedX * this.layerSettings[i].scrollingSpeed.x;
                 layer.tilePosition.y -= baseScrollingSpeedY * this.layerSettings[i].scrollingSpeed.y;
             }
@@ -41,7 +38,6 @@ define(
             for(var i = 0; i < l; i++) {
 
                 layerSetting = this.layerSettings[i];
-                //console.log(layerSettings.assetKey);
                 layerSprite = this.layers[this.layers.length] = this.game.add.tileSprite(
                     layerSetting.dimensions.x,
                     layerSetting.dimensions.y,
@@ -52,9 +48,6 @@ define(
                     group
                 );
                 layerSprite.fixedToCamera = layerSetting.fixedToCamera;
-                //layerSprite.name = layerSetting.assetKey;
-                //layerSprite.generateTilingTexture(true);
-                //layerSprite.inFrontOfAction = layerSetting.inFrontOfAction;
             }
         };
 

@@ -59,8 +59,8 @@ define(
         Hero.prototype.update = function() {
             this.checkCollisions();
 
-            var up = Controls.upIsPressed() || Controls.isSwipedUp(),
-                down = Controls.downIsPressed() || Controls.isSwipedDown();
+            var up = Controls.upIsPressed() || Controls.isSwipedUp() || Controls.isTiltedUp(),
+                down = Controls.downIsPressed() || Controls.isSwipedDown() || Controls.isTiltedDown();
 
             if(this.direction === 1) {
                 this.treadingWater = up;

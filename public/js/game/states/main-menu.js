@@ -33,8 +33,16 @@ define(
             this.title = this.game.add.bitmapText(0, 84, Settings.game.font, 'DEEP SEA\nFREEDIVER', 36);
             this.title.align = 'center';
             this.title.x = (this.game.width - this.title.textWidth) * 0.5;
+
+            var instructionsText;
+            if(Settings.game.device.desktop) {
+                instructionsText = 'USE THE ARROW KEYS\nOR WASD TO DIVE,\nCOLLECT TREASURE\nAND AVOID HAZARDS!';
+            }
+            else {
+                instructionsText = 'TILT OR SWIPE TO\nDIVE, COLLECT\nTREASURE AND\nAVOID HAZARDS!';   
+            }
             
-            this.instructions = this.game.add.bitmapText(0, 250, Settings.game.font, 'USE THE ARROW KEYS\nOR WASD TO DIVE,\nCOLLECT TREASURE\nAND AVOID HAZARDS!', 24);
+            this.instructions = this.game.add.bitmapText(0, 250, Settings.game.font, instructionsText, 24);
             this.instructions.align = 'center';
             this.instructions.x = (this.game.width - this.instructions.textWidth) * 0.5;
 

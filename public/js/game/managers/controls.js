@@ -31,15 +31,50 @@ define(
 
             this.swipedUp = false;
             this.swipedDown = false;
+            
+            //this.debug = new Phaser.BitmapText(this.game, 2, 20, Settings.game.font, 'TILT', 32);
+            //this.game.world.add(this.debug);
+        
+            window.addEventListener('deviceorientation', this.handleOrientation.bind(this), true);
+        };
+
+        Controls.prototype.handleOrientation = function(event) {
+            var x = event.gamma; // range [-90,90]
+            var y = event.beta;  // range [-180,180]
+
+            //this.debug.text = x + ' / ' + y;
+            var tiltX = x / 90; // range [-1, 1]
+            var tiltY = y / 180; // range [-1, 1]
+
+            this.tiltedUp = tiltY < 0;
+            this.tiltedDown = tiltY > 0.2;
+            this.tiltedLeft = tiltX < -0.15;
+            this.tiltedRight = tiltX > 0.15;
+        };
+
+        Controls.prototype.isTiltedDown = function() {
+            return this.tiltedDown;
+        };
+
+        Controls.prototype.isTiltedUp = function() {
+            return this.tiltedUp;
+        };
+
+        Controls.prototype.isTiltedLeft = function() {
+            return this.tiltedLeft;
+        };
+
+        Controls.prototype.isTiltedRight = function() {
+            return this.tiltedRight;
         };
 
         Controls.prototype.update = function() {
             if(this.userControlRemoved) { return; }
 
-            if(this.leftIsPressed() || this.isSwipedLeft()) {
+            if(this.leftIsPressed() || this.isSwipedLeft() || this.isTiltedLeft()) {
                 this.hero.left();
             }
-            else if(this.rightIsPressed() || this.isSwipedRight()) {
+            else if(this.rightIsPressed() || this.isSwipedRight() || this.isTiltedRight()) {
                 this.hero.right();
             }
         };
